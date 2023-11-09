@@ -7,7 +7,7 @@ const {authz, isStudent, isAdmin} = require("../middlewares/auth");
 router.post("/login",login);
 router.post("/signup", signup);
 
-router.get("/",authz, (req,res)=> {
+router.get("/test",authz, (req,res)=> {
     res.json({
         success : true,
         message : "Welcome to the protection route for test"
